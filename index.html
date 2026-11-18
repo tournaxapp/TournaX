@@ -1,20 +1,726 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>TournaX – Tournament App</title>
-<meta name="description" content="Download TournaX, the tournament app. Get the latest TournaX Android APK.">
-<meta name="robots" content="index,follow">
-<meta name="theme-color" content="#10152b">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080808">
+<meta name="description" content="TournaX - Join exciting Free Fire, PUBG Mobile, eFootball, Mobile Legends and other gaming tournaments in Bangladesh.">
+<title>TournaX - Your Tournament Starts Here</title>
+
 <style>
-*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;background:radial-gradient(circle at 50% 0,#263b78,#10152b 55%);color:#fff;min-height:100vh;display:grid;place-items:center;padding:24px}.wrap{width:min(680px,100%);text-align:center}.logo{width:112px;height:112px;object-fit:contain;border-radius:26px;background:#fff1;padding:8px;box-shadow:0 12px 40px #0006}.brand{font-size:clamp(42px,9vw,64px);font-weight:900;letter-spacing:-2px;margin:18px 0 4px}.tag{color:#c5d2f7;font-size:18px;margin:0 0 28px}.panel{background:#ffffff12;border:1px solid #ffffff25;border-radius:24px;padding:28px;backdrop-filter:blur(12px)}.btn{display:inline-block;background:#75e0a2;color:#102319;text-decoration:none;font-weight:800;padding:16px 28px;border-radius:14px;font-size:18px;margin:14px 0 8px}.btn:hover{filter:brightness(1.06)}.meta{color:#c5d2f7;font-size:14px;line-height:1.8}.features{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:20px}.pill{border:1px solid #ffffff30;border-radius:99px;padding:8px 13px;color:#dce5ff;font-size:13px}footer{color:#9eadd8;font-size:12px;margin-top:22px}h2{margin:0 0 8px}p{line-height:1.6}
-</style></head>
-<body><main class="wrap">
-<img class="logo" src="app-icon.png" alt="TournaX app icon" onerror="this.style.display='none'">
-<div class="brand">TournaX</div><p class="tag">Your tournament starts here.</p>
-<section class="panel"><h2>Download TournaX for Android</h2><p>Get the TournaX Android app and install it on your device.</p>
-<a class="btn" href="TournaX.apk" download>↓ &nbsp; Download APK</a>
-<div class="meta">Version 1.0.0 · Android APK · 7.6 MB<br>Package: com.turnax.app</div>
-<div class="features"><span class="pill">Tournament app</span><span class="pill">Android</span><span class="pill">Version 1.0.0</span></div>
-</section><footer>© 2026 TournaX. All rights reserved.<br>Only install apps from sources you trust.</footer>
-</main></body></html>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --gold: #f5c542;
+  --dark: #080808;
+  --card: #151515;
+  --muted: #aaa;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: var(--dark);
+  color: white;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: 90%;
+  max-width: 1150px;
+  margin: auto;
+}
+
+/* NAVIGATION */
+
+header {
+  background: #101010;
+  border-bottom: 1px solid #292929;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav {
+  min-height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: 900;
+  color: var(--gold);
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  font-size: 14px;
+  color: #ddd;
+}
+
+.nav-links a:hover {
+  color: var(--gold);
+}
+
+/* HERO */
+
+.hero {
+  min-height: 510px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 80px 0;
+  background:
+    radial-gradient(ellipse at center, #392b08 0%, #15100a 40%, #080808 80%);
+}
+
+.hero h1 {
+  font-size: clamp(42px, 8vw, 76px);
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.hero h1 span,
+.section-title span {
+  color: var(--gold);
+}
+
+.hero p {
+  max-width: 650px;
+  margin: 0 auto 30px;
+  color: #ccc;
+  font-size: 17px;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--gold);
+  color: #111;
+  padding: 13px 25px;
+  border-radius: 7px;
+  font-weight: bold;
+  margin: 5px;
+  transition: .2s;
+}
+
+.btn:hover {
+  background: white;
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+}
+
+/* SECTIONS */
+
+section {
+  padding: 75px 0;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 38px;
+}
+
+.section-title h2 {
+  font-size: 34px;
+  margin-bottom: 10px;
+}
+
+.section-title p {
+  color: var(--muted);
+}
+
+/* GAME BANNERS */
+
+.games-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.game-card {
+  background: var(--card);
+  border: 1px solid #292929;
+  border-radius: 12px;
+  overflow: hidden;
+  padding: 0 0 20px;
+  text-align: center;
+  transition: .25s;
+}
+
+.game-card:hover {
+  border-color: var(--gold);
+  transform: translateY(-6px);
+  box-shadow: 0 8px 25px #f5c54220;
+}
+
+.game-card img {
+  width: 100%;
+  height: 155px;
+  object-fit: cover;
+  display: block;
+  margin-bottom: 15px;
+  background: #222;
+}
+
+.game-card h3 {
+  font-size: 19px;
+  color: var(--gold);
+}
+
+.game-card p {
+  color: var(--muted);
+  font-size: 13px;
+  padding: 0 10px;
+}
+
+/* TOURNAMENTS */
+
+.tournament-section {
+  background: #101010;
+}
+
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.filter-buttons button {
+  background: #202020;
+  color: white;
+  border: 1px solid #383838;
+  padding: 10px 17px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.filter-buttons button:hover,
+.filter-buttons button.active {
+  background: var(--gold);
+  color: #111;
+}
+
+.tournament-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.tournament-card {
+  background: var(--card);
+  border: 1px solid #303030;
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.tournament-card h3 {
+  color: var(--gold);
+  margin-bottom: 10px;
+}
+
+.tournament-card p {
+  color: #bbb;
+  font-size: 14px;
+  margin: 7px 0;
+}
+
+.status {
+  display: inline-block;
+  background: #332a12;
+  color: var(--gold);
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  margin-top: 12px;
+}
+
+/* PRIZE */
+
+.prize-box {
+  text-align: center;
+  background: linear-gradient(135deg, #211a08, #151515);
+  border: 1px solid #6c5417;
+  border-radius: 15px;
+  padding: 45px 20px;
+}
+
+.prize-box h2 {
+  color: var(--gold);
+  font-size: 35px;
+  margin-bottom: 12px;
+}
+
+.prize-box p {
+  color: #ccc;
+}
+
+/* ABOUT */
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.info-card {
+  background: var(--card);
+  border: 1px solid #292929;
+  padding: 25px;
+  border-radius: 12px;
+}
+
+.info-card h3 {
+  color: var(--gold);
+  margin-bottom: 10px;
+}
+
+.info-card p {
+  color: #bbb;
+  font-size: 14px;
+}
+
+/* HOW TO JOIN */
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 18px;
+}
+
+.step {
+  text-align: center;
+  background: var(--card);
+  border: 1px solid #292929;
+  padding: 25px 15px;
+  border-radius: 12px;
+}
+
+.step-number {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  background: var(--gold);
+  color: #111;
+  border-radius: 50%;
+  font-weight: bold;
+  margin: 0 auto 14px;
+}
+
+.step p {
+  color: #aaa;
+  font-size: 14px;
+  margin-top: 7px;
+}
+
+/* CONTACT AND DOWNLOAD */
+
+.contact-box {
+  text-align: center;
+  background: #151515;
+  border: 1px solid #3c321a;
+  border-radius: 15px;
+  padding: 40px 20px;
+}
+
+.contact-box p {
+  color: #bbb;
+  margin: 12px 0 20px;
+}
+
+/* FOOTER */
+
+footer {
+  background: #101010;
+  border-top: 1px solid #292929;
+  text-align: center;
+  padding: 25px 10px;
+  color: #999;
+  font-size: 13px;
+}
+
+footer strong {
+  color: var(--gold);
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+  nav {
+    flex-direction: column;
+    padding: 13px 0;
+  }
+
+  .nav-links {
+    justify-content: center;
+    gap: 13px;
+  }
+
+  .nav-links a {
+    font-size: 12px;
+  }
+
+  .hero {
+    min-height: 430px;
+  }
+
+  section {
+    padding: 55px 0;
+  }
+
+  .section-title h2 {
+    font-size: 28px;
+  }
+
+  .game-card img {
+    height: 145px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="container">
+    <nav>
+      <a href="#home" class="logo">TournaX</a>
+
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#games">Games</a>
+        <a href="#tournaments">Tournaments</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+  <div class="container">
+    <h1>Your Tournament<br><span>Starts Here.</span></h1>
+
+    <p>
+      Welcome to TournaX! Discover exciting gaming tournaments,
+      compete with players, show your skills and enjoy the competition.
+    </p>
+
+    <a href="#tournaments" class="btn">Explore Tournaments</a>
+    <a href="#download" class="btn btn-outline">Download App</a>
+  </div>
+</section>
+
+<!-- GAMES -->
+
+<section id="games">
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Popular <span>Games</span></h2>
+      <p>Play your favourite games and join the competition.</p>
+    </div>
+
+    <div class="games-grid">
+
+      <div class="game-card">
+        <img src="https://placehold.co/600x300/171717/f5c542?text=FREE+FIRE"
+             alt="Free Fire Banner">
+        <h3>Free Fire</h3>
+        <p>Battle Royale Tournaments</p>
+      </div>
+
+      <div class="game-card">
+        <img src="https://placehold.co/600x300/171717/f5c542?text=PUBG+MOBILE"
+             alt="PUBG Mobile Banner">
+        <h3>PUBG Mobile</h3>
+        <p>Survival Battles</p>
+      </div>
+
+      <div class="game-card">
+        <img src="https://placehold.co/600x300/171717/f5c542?text=eFOOTBALL"
+             alt="eFootball Banner">
+        <h3>eFootball</h3>
+        <p>Football Competitions</p>
+      </div>
+
+      <div class="game-card">
+        <img src="https://placehold.co/600x300/171717/f5c542?text=MOBILE+LEGENDS"
+             alt="Mobile Legends Banner">
+        <h3>Mobile Legends</h3>
+        <p>Team Battles</p>
+      </div>
+
+      <div class="game-card">
+        <img src="https://placehold.co/600x300/171717/f5c542?text=FC+MOBILE"
+             alt="FC Mobile Banner">
+        <h3>FC Mobile</h3>
+        <p>Football Tournaments</p>
+      </div>
+
+      <div class="game-card">
+        <img src="https://placehold.co/600x300/171717/f5c542?text=LUDO"
+             alt="Ludo Banner">
+        <h3>Ludo</h3>
+        <p>Fun Gaming Matches</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- TOURNAMENTS -->
+
+<section class="tournament-section" id="tournaments">
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Gaming <span>Tournaments</span></h2>
+      <p>Explore upcoming Free and Paid tournaments on TournaX.</p>
+    </div>
+
+    <div class="filter-buttons">
+      <button class="active" onclick="filterGames('all', this)">All Games</button>
+      <button onclick="filterGames('freefire', this)">Free Fire</button>
+      <button onclick="filterGames('football', this)">Football</button>
+      <button onclick="filterGames('pubg', this)">PUBG</button>
+      <button onclick="filterGames('other', this)">Others</button>
+    </div>
+
+    <div class="tournament-grid">
+
+      <div class="tournament-card" data-game="freefire">
+        <h3>Free Fire Tournament</h3>
+        <p>Mode: Battle Royale</p>
+        <p>Entry: Free / Paid</p>
+        <p>Prize: To be announced</p>
+        <span class="status">Coming Soon</span>
+      </div>
+
+      <div class="tournament-card" data-game="football">
+        <h3>eFootball Tournament</h3>
+        <p>Mode: 1 vs 1</p>
+        <p>Entry: Free / Paid</p>
+        <p>Prize: To be announced</p>
+        <span class="status">Coming Soon</span>
+      </div>
+
+      <div class="tournament-card" data-game="pubg">
+        <h3>PUBG Mobile Tournament</h3>
+        <p>Mode: Squad / Solo</p>
+        <p>Entry: Free / Paid</p>
+        <p>Prize: To be announced</p>
+        <span class="status">Coming Soon</span>
+      </div>
+
+      <div class="tournament-card" data-game="other">
+        <h3>Mobile Legends</h3>
+        <p>Mode: Team Battle</p>
+        <p>Entry: Free / Paid</p>
+        <p>Prize: To be announced</p>
+        <span class="status">Coming Soon</span>
+      </div>
+
+      <div class="tournament-card" data-game="football">
+        <h3>FC Mobile Tournament</h3>
+        <p>Mode: Football Match</p>
+        <p>Entry: Free / Paid</p>
+        <p>Prize: To be announced</p>
+        <span class="status">Coming Soon</span>
+      </div>
+
+      <div class="tournament-card" data-game="other">
+        <h3>Ludo Tournament</h3>
+        <p>Mode: Classic Ludo</p>
+        <p>Entry: Free / Paid</p>
+        <p>Prize: To be announced</p>
+        <span class="status">Coming Soon</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PRIZE POOL -->
+
+<section id="prizes">
+  <div class="container">
+    <div class="prize-box">
+      <h2>🏆 Exciting Prize Pools</h2>
+      <p>
+        Compete in tournaments and get a chance to win exciting prizes.
+        Prize details will be announced with each tournament.
+      </p>
+      <p style="margin-top:12px;color:#f5c542;font-weight:bold;">
+        Currency: BDT (৳)
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+
+<section id="about">
+  <div class="container">
+
+    <div class="section-title">
+      <h2>About <span>TournaX</span></h2>
+      <p>Your gaming competition platform.</p>
+    </div>
+
+    <div class="about-grid">
+
+      <div class="info-card">
+        <h3>🎮 Multiple Games</h3>
+        <p>Explore tournaments across different popular mobile games.</p>
+      </div>
+
+      <div class="info-card">
+        <h3>🏆 Free & Paid</h3>
+        <p>Discover different tournament types and their entry requirements.</p>
+      </div>
+
+      <div class="info-card">
+        <h3>🔥 Competitive Gaming</h3>
+        <p>Challenge other players, improve your skills and enjoy gaming.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- HOW TO JOIN -->
+
+<section id="how-to-join">
+  <div class="container">
+
+    <div class="section-title">
+      <h2>How to <span>Join</span></h2>
+      <p>Get started with TournaX in a few simple steps.</p>
+    </div>
+
+    <div class="steps">
+
+      <div class="step">
+        <div class="step-number">1</div>
+        <h3>Download App</h3>
+        <p>Download and install the TournaX Android app.</p>
+      </div>
+
+      <div class="step">
+        <div class="step-number">2</div>
+        <h3>Explore Games</h3>
+        <p>Find your favourite game and available tournaments.</p>
+      </div>
+
+      <div class="step">
+        <div class="step-number">3</div>
+        <h3>Register</h3>
+        <p>Follow the tournament registration instructions.</p>
+      </div>
+
+      <div class="step">
+        <div class="step-number">4</div>
+        <h3>Compete</h3>
+        <p>Join the match and show your gaming skills.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- DOWNLOAD -->
+
+<section id="download">
+  <div class="container">
+    <div class="contact-box">
+      <h2>Download <span style="color:#f5c542;">TournaX</span></h2>
+      <p>Get the TournaX Android app and explore the platform.</p>
+
+      <a href="TournaX.apk" class="btn" download>Download APK</a>
+
+      <p style="font-size:13px;margin-top:15px;">
+        Android App | Version 1.0.0
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+  <div class="container">
+    <div class="contact-box">
+      <h2>Contact <span style="color:#f5c542;">Us</span></h2>
+      <p>Need help or have questions? Contact the TournaX team.</p>
+
+      <a class="btn"
+         href="https://wa.me/8801330051790"
+         target="_blank"
+         rel="noopener">
+        Contact on WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+
+<footer>
+  <p>© 2026 <strong>TournaX</strong>. All Rights Reserved.</p>
+  <p>Your Tournament Starts Here.</p>
+</footer>
+
+<script>
+function filterGames(game, button) {
+  const cards = document.querySelectorAll('.tournament-card');
+  const buttons = document.querySelectorAll('.filter-buttons button');
+
+  buttons.forEach(btn => btn.classList.remove('active'));
+  button.classList.add('active');
+
+  cards.forEach(card => {
+    if (game === 'all' || card.dataset.game === game) {
+      card.style.display = 'block';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+}
+</script>
+
+</body>
+</html>
